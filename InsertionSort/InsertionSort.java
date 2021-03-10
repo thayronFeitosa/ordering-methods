@@ -56,7 +56,6 @@ public class InsertionSort {
 				vetor[j + 1] = vetor[j];
 				j--;
 		
-
 			}
 			cont++;
 			vetor[j + 1] = aux;
