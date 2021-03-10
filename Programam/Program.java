@@ -10,7 +10,6 @@ public class Program {
 		BubbleSort buble = new BubbleSort();
 
 		Vetor vet1 = new Vetor();
-		;
 		CreateFIleText.writeInNotepad("Entrando BublleSort 1 milhão\n\n");
 		buble.bublleSortOrderGrowing(vet1.createVetorRandom(1000));
 

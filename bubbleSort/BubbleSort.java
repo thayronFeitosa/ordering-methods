@@ -25,7 +25,8 @@ public class BubbleSort {
 			}
 		}
 		long tempofinal = System.currentTimeMillis();
-		writeToTheNotePad("bublleSortOrderGrowing", tempoInicial, tempofinal, cont);
+    String message = CreateFIleText.prepareWriteToTheNotePad("bublleSortOrderGrowing", tempoInicial, tempofinal, cont);
+    CreateFIleText.writeInNotepad(message);
 		return vetor;
 	}
 
@@ -51,20 +52,12 @@ public class BubbleSort {
 			}
 		}
 		long tempofinal = System.currentTimeMillis();
-		writeToTheNotePad("bublleSortOrderDescending", tempoInicial, tempofinal, cont);
+		String message = CreateFIleText.prepareWriteToTheNotePad("bublleSortOrderDescending", tempoInicial, tempofinal, cont);
+    CreateFIleText.writeInNotepad(message);
+
 
 		return vetor;
 	}
-
-	public void writeToTheNotePad(String function, long timeInitial, long timeFinal, int cont) {
-		String temp = ("<--" + function + "-->\nTempo em Milissegundos e de: " + (timeFinal - timeInitial)
-				+ "\nO tempo em Segundos e de: " + ((timeFinal - timeInitial) / 1000) + "\nO tempo em Minutos e de : "
-				+ ((timeFinal - timeInitial) / 600000) + "\nQuantidade de trocas e de: " + cont
-				+ "\n-------------------------------------------------------------------");
-				CreateFIleText.writeInNotepad(temp);
-		System.out.println(temp);
-	}
-
 	/**
 	 * mostra os valores das possi��o do vetor
 	 * 
