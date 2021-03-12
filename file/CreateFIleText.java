@@ -13,11 +13,26 @@ import java.util.NoSuchElementException;
 public class CreateFIleText {
   private static Formatter output;
 
-  public static String prepareWriteToTheNotePad(String function, long timeInitial, long timeFinal, int cont) {
-    return ("<--" + function + "-->\nTempo em Milissegundos e de: " + (timeFinal - timeInitial)
-      + "\nO tempo em Segundos e de: " + ((timeFinal - timeInitial) / 1000) + "\nO tempo em Minutos e de : "
-      + ((timeFinal - timeInitial) / 600000) + "\nQuantidade de trocas e de: " + cont
-      + "\n-------------------------------------------------------------------");
+  /**
+   * 
+   * the execution time transforming the milliseconds into: seconds, minutes,
+   * hours ... according to the divisor that is passed as a parameter
+   * 
+   * @param timeInitial
+   * @param timeFinal
+   * @param divider
+   * @return
+   */
+  private static long calculateRunTime(long timeInitial, long timeFinal, int divider) {
+    return ((timeFinal - timeInitial) / divider);
+  }
+
+  public static String prepareWriteToTheNotePad(String nameFunction, long timeInitial, long timeFinal, int cont) {
+    return ("<--" + nameFunction + "-->\nTempo em Milissegundos e de: " + (timeFinal - timeInitial)
+        + "\nO tempo em Segundos e de: " + calculateRunTime(timeInitial, timeFinal, 1000)
+        + "\nO tempo em Minutos e de : " + calculateRunTime(timeInitial, timeFinal, 600000)
+        + "\nQuantidade de trocas e de: " + cont
+        + "\n-------------------------------------------------------------------");
 
   }
 

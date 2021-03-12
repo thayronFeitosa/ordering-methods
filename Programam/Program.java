@@ -13,6 +13,7 @@ public class Program {
     int[] vetAux;
 		CreateFIleText.writeInNotepad("Entrando BublleSort 1 milhão\n\n");
 		vetAux = buble.bublleSortOrderGrowing(vet1.createVetorRandom(1000000)); //order when random
+		vetAux = buble.bublleSortOrderGrowing(vet1.createVetorRandom(500000)); //order when random
 		vetAux = buble.bublleSortOrderGrowing(vetAux); // already ordered
 		vetAux = buble.bublleSortOrderDescending(vetAux); // sort Growing
     buble.bublleSortOrderDescending(vetAux); //already ordered Descending
