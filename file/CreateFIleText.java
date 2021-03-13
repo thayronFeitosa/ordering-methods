@@ -30,7 +30,7 @@ public class CreateFIleText {
   public static String prepareWriteToTheNotePad(String nameFunction, long timeInitial, long timeFinal, int cont) {
     return ("<--" + nameFunction + "-->\nTempo em Milissegundos e de: " + (timeFinal - timeInitial)
         + "\nO tempo em Segundos e de: " + calculateRunTime(timeInitial, timeFinal, 1000)
-        + "\nO tempo em Minutos e de : " + calculateRunTime(timeInitial, timeFinal, 600000)
+        + "\nO tempo em Minutos e de : " + calculateRunTime(timeInitial, timeFinal, 60000)
         + "\nQuantidade de trocas e de: " + cont
         + "\n-------------------------------------------------------------------");
 
