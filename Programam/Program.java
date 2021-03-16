@@ -4,12 +4,14 @@ import file.CreateFIleText;
 import bubbleSort.BubbleSort;
 import createVetor.Vetor;
 import ShellSort.ShellSort;
+import MergeSort.MergeSort;
 
 public class Program {
 
   public static void main(String[] args) {
     BubbleSort buble = new BubbleSort();
     ShellSort shellSort = new ShellSort();
+    MergeSort mergeSort = new MergeSort();
 
     Vetor vet1 = new Vetor();
     int[] vetAux;
@@ -36,11 +38,18 @@ public class Program {
     // vetAux = buble.bublleSortOrderDescending(vetAux); // sort Growing
     // buble.bublleSortOrderDescending(vetAux); //already ordered Descending
 
+    // CreateFIleText.writeInNotepad("Entrando shellSort 1 milhão\n\n");
+    // vetAux = shellSort.shellSortOrderGrowing(vet1.createVetorRandom(10000000));
+    // vetAux = shellSort.shellSortOrderGrowing(vetAux);
+    // vetAux = shellSort.shellSortOrderDescending(vetAux);
+    // shellSort.shellSortOrderDescending(vetAux);
     CreateFIleText.writeInNotepad("Entrando shellSort 1 milhão\n\n");
-    vetAux = shellSort.shellSortOrderGrowing(vet1.createVetorRandom(10000000));
-    vetAux = shellSort.shellSortOrderGrowing(vetAux);
-    vetAux = shellSort.shellSortOrderDescending(vetAux);
-    shellSort.shellSortOrderDescending(vetAux);
+    mergeSort.sortOrderOrderGrowing(vet1.createVetorRandom(5), 0, 4);
+
+
+
+
+
   }
 
 }
