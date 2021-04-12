@@ -8,10 +8,3 @@ Busca sequencial ou linear
   Abusca linear e uma tecnica que consiste em comparar sequencialmente cada chave do vetor com um certo valor procurando até que este seja encontrado, ou seja atingido o final do vetor sem sucesso.
 </p>
 
-
-
-### Features
-
-- [x] Cadastro de usuário
-- [x] Cadastro de cliente
-- [ ] Cadastro de produtos
